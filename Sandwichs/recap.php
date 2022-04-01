@@ -7,9 +7,9 @@ if (isset($_POST['include'])) {
     $include = strip_tags($_POST['include']);
 }
 if (isset($_FILES['fichier'])){
-    $_FILES['fichier']['name']=rand();
+    
     if (!file_exists(__DIR__.'/uploads/'.$_FILES['fichier']['name'])){
-        move_uploaded_file($_FILES['fichier']['tmp_name'],__DIR__.'/uploads/'.$_FILES['fichier']['name']);
+        move_uploaded_file($_FILES['fichier']['tmp_name'],__DIR__.'/uploads/'.uniqid().$_FILES['fichier']['name']);
     }
 }
 $price=4;
