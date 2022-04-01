@@ -18,8 +18,7 @@ if (isset($_POST['submit']))
 
 }
 else {
-   // $error= 'you have already submitted an answer: '.$_POST['user'].' : '.$_COOKIE[$_POST['user']];}
-    ?>
+  
     <div class="alert alert-warning" role="alert"> <?='you have already submitted an answer: '.$_POST['user'].' : '.$_COOKIE[$_POST['user']]?></div>
     <?php
 }
